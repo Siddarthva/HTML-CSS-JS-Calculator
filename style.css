@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #b3d9ff, #80bfff); /* Light blue gradient */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  overflow: hidden;
+  position: relative;
+}
+
+.calculator {
+  width: 320px;
+  background-color: rgba(240, 248, 255, 0.9); /* Alice blue for transparency */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(224, 236, 255, 0.9); /* Soft light blue */
+  color: #333;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  height: 50px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #4da6ff, #0066cc); /* Gradient with blue tones */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom right, #3399ff, #004080); /* Slightly darker shades */
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Particle Effect on Clear */
+@keyframes particleFade {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(0.5);
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 4px; /* Smaller particle size for subtlety */
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(173, 216, 230, 0.8); /* Light blue tone */
+  pointer-events: none;
+  animation: particleFade 1s forwards ease-out;
+}
+
+/* JavaScript will handle particle generation */
+/* Particle Styles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #cce6ff, #99ccff); /* Subtle gradient blue */
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes particle-animation {
+  to {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+}
